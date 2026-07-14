@@ -1,3 +1,12 @@
+// SAMPLE MENU DATA STRUCTURE
+var menuLinks = [
+  { text: 'about', href: '/about' },
+  { text: 'catalog', href: '/catalog' },
+  { text: 'orders', href: '/orders' },
+  { text: 'account', href: '/account' },
+];
+
+
 // ============================
 // |          PART 1          |
 // ============================
@@ -32,3 +41,15 @@ topMenuEl.style.backgroundColor = 'var(--top-menu-bg)';
 
 // 4. Add a class of flex-around to topMenuEl.
 topMenuEl.classList.add('flex-around');
+
+// runs function once per item in the array
+menuLinks.forEach(function (link) {
+
+const linkEl = document.createElement('a');
+
+linkEl.setAttribute('href',link.href);
+
+linkEl.textContent = link.text;
+
+topMenuEl.appendChild(linkEl);
+});
