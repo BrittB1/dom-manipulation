@@ -42,6 +42,10 @@ topMenuEl.style.backgroundColor = 'var(--top-menu-bg)';
 // 4. Add a class of flex-around to topMenuEl.
 topMenuEl.classList.add('flex-around');
 
+// ============================
+// |          PART 3          |
+// ============================
+
 // runs function once per item in the array
 menuLinks.forEach(function (link) {
 
