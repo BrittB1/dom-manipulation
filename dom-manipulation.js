@@ -23,7 +23,7 @@ mainEl.innerHTML = '<h1>DOM Manipulation</h1>';
 
 // 4.Add a class of flex-ctr to mainEl.
 // Hint: Use the Element.classList API.
-mainEl.classList.add('flex');
+mainEl.classList.add('flex-ctr');
 
 // ============================
 // |          PART 2          |
