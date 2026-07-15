@@ -57,3 +57,18 @@ linkEl.textContent = link.text;
 
 topMenuEl.appendChild(linkEl);
 });
+
+// ============================
+// |          PART 3.2         |
+// ============================
+
+const subMenuEl = document.querySelector('#sub-menu');
+subMenuEl.style.height = "100%";
+
+subMenuEl.style.backgroundColor = 'var(--sub-menu-bg)';
+
+subMenuEl.classList.add('flex-around');
+
+subMenuEl.style.position = 'absolute';
+
+subMenuEl.style.top = '0';
