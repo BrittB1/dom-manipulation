@@ -82,3 +82,20 @@ subMenuEl.classList.add('flex-around');
 subMenuEl.style.position = 'absolute';
 
 subMenuEl.style.top = '0';
+
+
+// ============================
+// |          PART 4.2         |
+// ============================
+
+const topMenuLinks = topMenuEl.querySelectorAll('a');
+
+
+// 'when this element gets clicked, run this function.
+topMenuEl, addEventListener('click', function (evt) {
+  evt.preventDeafult();
+
+  if (evt.target.tagName !== 'A') return;
+  console.log(evt.target.textContent);
+});
+
