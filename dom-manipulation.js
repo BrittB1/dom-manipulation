@@ -92,12 +92,11 @@ const topMenuLinks = topMenuEl.querySelectorAll('a');
 
 
 // 'when this element gets clicked, run this function.
-topMenuEl, addEventListener('click', function (evt) {
-  evt.preventDeafult();
+topMenuEl.addEventListener('click', function (evt) {
+  evt.preventDefault();
 
   if (evt.target.tagName !== 'A') return;
   console.log(evt.target.textContent);
-});
 
 const isActive = evt.target.classList.contains('active')
 
@@ -105,6 +104,16 @@ topMenuLinks.forEach(function (link) {
   link.classList.remove('active');
 });
 
-if (!isActive) {
-  evt.target.classList.add('active');
-}
+subMenuEl.style.top = '0';
+
+  if (!isActive) {
+    evt.target.classList.add('active');
+
+    const linkObject = menuLinks.find(function (link) {
+      return link.text === evt.target.textContent;
+    });
+    if (linkObject.subLinks) {
+      subMenuEl.style.top = "100%";
+    }
+  }
+});
