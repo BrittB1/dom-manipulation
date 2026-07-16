@@ -99,3 +99,12 @@ topMenuEl, addEventListener('click', function (evt) {
   console.log(evt.target.textContent);
 });
 
+const isActive = evt.target.classList.contains('active')
+
+topMenuLinks.forEach(function (link) {
+  link.classList.remove('active');
+});
+
+if (!isActive) {
+  evt.target.classList.add('active');
+}
